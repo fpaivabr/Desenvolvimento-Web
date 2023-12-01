@@ -1,0 +1,22 @@
+Atividade individual
+
+
+1. Criar uma API REST com Node.js para implementar as funcionalidades de cadastro (CRUD) para classe Produto
+
+Produto {
+  codigo,
+  nome,
+  preco
+}
+
+A API deve realizar as seguintes operações:
+Listar todos os produtos -> GET /produtos
+Listar um produto por código -> GET /produtos/:codigo
+Inserir novo produto -> POST /produtos
+Alterar produto (nome e/ou preco) -> PUT
+
+/produtos/:codigo
+Remover produto ->  DELETE /produtos/:codigo
+Os dados devem ser persistidos em um banco de dados da sua preferência. (Sugestão: SQLite)
+2. Implementar um frontend para acessar os serviços da API implementada. Todas as funcionalidades devem ser implementadas.
+Usar fetch ou axios para consumir os serviços

@@ -1,97 +1,52 @@
-﻿const db = require('../models/produto');
+﻿"use strict";
 
-// Listar todos os produtos
-const listarTodos = (req, res) => {
-  db.all("SELECT * FROM produto", [], (err, rows) => {
-    if (err) {
-      res.status(400).json({ "error": err.message });
-      return;
-    }
-    res.json({
-      "message": "Sucesso",
-      "data": rows
-    });
-  });
+let produtos = []; // Lista de produtos
+
+exports.listarTodos = (req, res) => {
+  res.json(produtos);
 };
 
-// Listar um produto por código
-const listarPorCodigo = (req, res) => {
-  const codigo = req.params.codigo;
-  db.get("SELECT * FROM produto WHERE codigo = ?", [codigo], (err, row) => {
-    if (err) {
-      res.status(400).json({ "error": err.message });
-      return;
-    }
-    res.json({
-      "message": "Sucesso",
-      "data": row
-    });
-  });
+exports.listarPorCodigo = (req, res) => {
+  const produto = produtos.find((p) => p.codigo === req.params.codigo);
+  if (produto) {
+    res.json(produto);
+  } else {
+    res.status(404).json({ error: true, message: "Produto não encontrado" });
+  }
 };
 
-// Inserir novo produto
-const inserirProduto = (req, res) => {
+exports.inserirProduto = (req, res) => {
   const { codigo, nome, preco } = req.body;
-
-  // Validação dos dados
-  if (!codigo || !nome || preco == null) {
-    return res.status(400).json({ "error": "Faltam dados do produto" });
+  const produtoExistente = produtos.find(
+    (produto) => produto.codigo === codigo
+  );
+  if (produtoExistente) {
+    res.status(409).json({ error: true, message: "Código já existente" });
+  } else {
+    const novoProduto = { codigo, nome, preco };
+    produtos.push(novoProduto);
+    res.json({ message: "Produto adicionado com sucesso", data: novoProduto });
   }
-
-  const sql = 'INSERT INTO produto (codigo, nome, preco) VALUES (?, ?, ?)';
-  db.run(sql, [codigo, nome, preco], function(err) {
-    if (err) {
-      return res.status(400).json({ "error": err.message });
-    }
-    res.json({
-      "message": "Produto inserido com sucesso",
-      "id": this.lastID
-    });
-  });
 };
 
-// Atualizar produto
-const atualizarProduto = (req, res) => {
-  const { nome, preco } = req.body;
-  const codigo = req.params.codigo;
-
-  // Validação dos dados
-  if (!nome || preco == null) {
-    return res.status(400).json({ "error": "Faltam dados para atualização do produto" });
+exports.atualizarProduto = (req, res) => {
+  const { codigo, nome, preco } = req.body;
+  const produto = produtos.find((p) => p.codigo === req.params.codigo);
+  if (produto) {
+    produto.nome = nome;
+    produto.preco = preco;
+    res.json({ message: "Produto atualizado com sucesso", data: produto });
+  } else {
+    res.status(404).json({ error: true, message: "Produto não encontrado" });
   }
-
-  const sql = 'UPDATE produto SET nome = ?, preco = ? WHERE codigo = ?';
-  db.run(sql, [nome, preco, codigo], function(err) {
-    if (err) {
-      return res.status(400).json({ "error": err.message });
-    }
-    res.json({
-      "message": "Produto atualizado com sucesso",
-      "data": this.changes
-    });
-  });
 };
 
-// Remover produto
-const removerProduto = (req, res) => {
-  const codigo = req.params.codigo;
-
-  const sql = 'DELETE FROM produto WHERE codigo = ?';
-  db.run(sql, codigo, function(err) {
-    if (err) {
-      return res.status(400).json({ "error": err.message });
-    }
-    res.json({
-      "message": "Produto removido com sucesso",
-      "data": this.changes
-    });
-  });
-};
-
-module.exports = {
-  listarTodos,
-  listarPorCodigo,
-  inserirProduto,
-  atualizarProduto,
-  removerProduto
+exports.removerProduto = (req, res) => {
+  const index = produtos.findIndex((p) => p.codigo === req.params.codigo);
+  if (index !== -1) {
+    produtos.splice(index, 1);
+    res.json({ message: "Produto removido com sucesso" });
+  } else {
+    res.status(404).json({ error: true, message: "Produto não encontrado" });
+  }
 };

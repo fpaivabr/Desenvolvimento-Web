@@ -1,20 +1,22 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Gerenciamento de Produtos</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="icon" href="caminho/para/favicon.ico" type="image/x-icon">
     <style>
         .container {
             max-width: 600px;
         }
+
         .form-control {
             max-width: 300px;
         }
     </style>
 </head>
+
 <body>
     <div class="container my-5">
         <h1 class="text-center mb-4">Gerenciamento de Produtos</h1>
@@ -37,27 +39,32 @@
 
         <!-- Conteúdo das Abas -->
         <div class="tab-content mt-3">
+            <!-- Aba Adicionar -->
             <div class="tab-pane fade show active" id="adicionar">
-                <!-- Formulário para adicionar -->
                 <input type="text" id="addCodigo" placeholder="Código" class="form-control my-2">
                 <input type="text" id="addNome" placeholder="Nome" class="form-control my-2">
                 <input type="number" id="addPreco" placeholder="Preço" class="form-control my-2">
                 <button onclick="adicionarProduto()" class="btn btn-primary">Adicionar</button>
             </div>
+
+            <!-- Aba Atualizar -->
             <div class="tab-pane fade" id="atualizar">
-                <!-- Formulário para atualizar -->
-                <input type="text" id="updateCodigo" placeholder="Código do Produto" class="form-control my-2">
-                <input type="text" id="updateNome" placeholder="Novo Nome" class="form-control my-2">
-                <input type="number" id="updatePreco" placeholder="Novo Preço" class="form-control my-2">
-                <button onclick="atualizarProduto()" class="btn btn-warning">Atualizar</button>
+                <input type="text" id="updateCodigo" placeholder="Produto" class="form-control my-2">
+                <input type="text" id="updateNome" placeholder="Nome" class="form-control my-2">
+                <input type="number" id="updatePreco" placeholder="Preço" class="form-control my-2">
+                <button onclick="atualizarProduto()" class="btn btn-primary">Atualizar</button>
             </div>
+
+            <!-- Aba Remover -->
             <div class="tab-pane fade" id="remover">
-                <!-- Formulário para remover -->
-                <input type="text" id="deleteCodigo" placeholder="Código do Produto" class="form-control my-2">
+                <input type="text" id="deleteCodigo" placeholder="Código" class="form-control my-2">
                 <button onclick="removerProduto()" class="btn btn-danger">Remover</button>
             </div>
+
+            <!-- Aba Listar -->
             <div class="tab-pane fade" id="listar">
-                <!-- Botão para listar todos os produtos -->
+                <input type="text" id="listarCodigo" placeholder="Código" class="form-control my-2">
+                <button onclick="listarProdutoEspecifico()" class="btn btn-info">Listar Produto</button>
                 <button onclick="listarProdutos()" class="btn btn-info">Listar Todos</button>
                 <div id="listaProdutos" class="mt-3"></div>
             </div>
@@ -69,6 +76,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Script JS para a lógica do Frontend -->
+    <script>
+        // Evento para limpar campos ao trocar de aba
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('addCodigo').value = '';
+                document.getElementById('addNome').value = '';
+                document.getElementById('addPreco').value = '';
+                document.getElementById('updateCodigo').value = '';
+                document.getElementById('updateNome').value = '';
+                document.getElementById('updatePreco').value = '';
+                document.getElementById('deleteCodigo').value = '';
+                document.getElementById('listarCodigo').value = '';
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>
