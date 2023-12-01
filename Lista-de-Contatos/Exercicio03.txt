@@ -1,0 +1,19 @@
+Exercício de Programação Web: Cadastro e Exibição de Contatos
+Valor: 1,0 ponto - N1
+
+Objetivo
+
+O objetivo deste exercício é criar uma página web que permita ao usuário gerenciar uma lista de contatos. Deve-se cadastrar objetos no formato JSON em um formulário e exibir esses objetos em uma tabela na mesma página. Você utilizará HTML, CSS e JavaScript para realizar essa tarefa.
+
+Requisitos
+
+1. Crie um formulário HTML que permita ao usuário inserir pelo menos três campos diferentes (por exemplo, Nome, Idade, E-mail).
+2. Utilize CSS para estilizar o formulário e a tabela.
+3. Use JavaScript para obter os dados inseridos no formulário.
+4. Armazene os dados capturados um objeto no formato JSON, em seguida armazene-o em um array.
+5. Mostre os dados armazenados na forma de uma tabela HTML abaixo do formulário.
+
+Dicas
+1. Você pode usar o método `push()` para adicionar um novo objeto ao array em JavaScript.
+2. Para criar elementos HTML dinamicamente, considere usar `document.createElement()`.
+3. Para inserir elementos HTML em outros elementos, considere usar `appendChild()`.
