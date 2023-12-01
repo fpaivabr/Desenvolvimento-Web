@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Produtos</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="icon" href="caminho/para/favicon.ico" type="image/x-icon">
+    <style>
+        .container {
+            max-width: 600px;
+        }
+        .form-control {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Gerenciamento de Produtos</h1>
+
+        <!-- Abas de Navegação -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#adicionar">Adicionar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#atualizar">Atualizar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#remover">Remover</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#listar">Listar</a>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="adicionar">
+                <!-- Formulário para adicionar -->
+                <input type="text" id="addCodigo" placeholder="Código" class="form-control my-2">
+                <input type="text" id="addNome" placeholder="Nome" class="form-control my-2">
+                <input type="number" id="addPreco" placeholder="Preço" class="form-control my-2">
+                <button onclick="adicionarProduto()" class="btn btn-primary">Adicionar</button>
+            </div>
+            <div class="tab-pane fade" id="atualizar">
+                <!-- Formulário para atualizar -->
+                <input type="text" id="updateCodigo" placeholder="Código do Produto" class="form-control my-2">
+                <input type="text" id="updateNome" placeholder="Novo Nome" class="form-control my-2">
+                <input type="number" id="updatePreco" placeholder="Novo Preço" class="form-control my-2">
+                <button onclick="atualizarProduto()" class="btn btn-warning">Atualizar</button>
+            </div>
+            <div class="tab-pane fade" id="remover">
+                <!-- Formulário para remover -->
+                <input type="text" id="deleteCodigo" placeholder="Código do Produto" class="form-control my-2">
+                <button onclick="removerProduto()" class="btn btn-danger">Remover</button>
+            </div>
+            <div class="tab-pane fade" id="listar">
+                <!-- Botão para listar todos os produtos -->
+                <button onclick="listarProdutos()" class="btn btn-info">Listar Todos</button>
+                <div id="listaProdutos" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS e Dependências -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Script JS para a lógica do Frontend -->
+    <script src="script.js"></script>
+</body>
+</html>
