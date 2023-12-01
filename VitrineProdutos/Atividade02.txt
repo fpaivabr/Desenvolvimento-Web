@@ -1,0 +1,10 @@
+Criação de uma Página de Vitrine de Produtos para um Site de Comércio Eletrônico
+
+Atividade individual
+Objetivos:
+
+1. Construir um layout básico para a página usando as tags HTML "header", "main" e "footer".
+2. Utilizar a tag "div" para criar blocos de produtos dentro do elemento "main".
+3. Implementar classes e IDs em HTML para permitir a estilização específica via CSS.
+4. Usar propriedades CSS como "background-color", "font-family", e "text-align" para tornar a página visualmente atraente.
+5. Utilizar a propriedade CSS "display: grid" ou "display: flex" para alinhar os produtos em uma grade.
