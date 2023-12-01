@@ -1,0 +1,10 @@
+Criar uma página HTML para estruturar e formatar um artigo científico:
+
+- Título
+- Subtópicos
+- Formatação de texto (negrito, itálico, etc)
+- Citações (diretas e blocos de citações)
+- Imagens
+- Referências com links
+
+Meu primeiro HTML!!
