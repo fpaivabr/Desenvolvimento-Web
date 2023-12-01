@@ -1,0 +1,18 @@
+r uma página de cadastro de funcionários utilizando HTML, CSS e JavaScript. Os dados dos funcionários serão armazenados em um arquivo JSON local. Você deverá utilizar métodos de array como `reduce`, `map`, `filter` e `forEach` para manipular os dados.
+
+1. Crie uma página HTML com um formulário que permita o usuário inserir as seguintes informações:
+    - Nome do funcionário
+    - Email do funcionário
+    - Cargo do funcionário (vendedor, gerente ou diretor)
+    - Valor do salário
+2. Adicione um botão "Enviar" para submeter o formulário.
+3. Adicione uma tabela ou lista na página para exibir todos os funcionários cadastrados.
+4. Quando o usuário submeter o formulário, valide os dados e, em seguida, adicione o novo funcionário em um array de objetos.
+5. Salve esse array de objetos em um arquivo JSON local.
+6. Utilize o método `map` para criar um novo array que contém apenas os nomes dos funcionários.
+7. Utilize o método `filter` para criar um novo array que contém apenas os funcionários com cargo de "gerente".
+8. Utilize o método `reduce` para calcular o salário total pago pela empresa.
+9. Utilize o método `forEach` para atualizar a tabela ou lista de funcionários na página HTML.
+10.[BÔNUS] Utilize o Bootstrap para estilizar sua aplicação (+0.5 ponto extra)
+- Todos os resultados obtidos devem ser exibidos na página da aplicação
+- Para salvar os dados em um arquivo JSON local, você pode utilizar a API `localStorage` do navegador ou qualquer outro meio que você preferir.
