@@ -1,0 +1,30 @@
+Atividade individual
+
+Você está encarregado de desenvolver uma aplicação web que permite aos usuários buscar filmes, visualizar detalhes, filtrá-los por gênero e marcá-los como favoritos.
+
+Familiarizar-se com a manipulação avançada do DOM.
+Introdução ao uso de APIs na web.
+Praticar a manipulação de arrays usando métodos como filter e includes.
+Aprender a persistir dados no navegador através do localStorage.
+A aplicação deve apresentar uma área de busca onde o usuário pode digitar o nome do filme.
+Ao lado do campo de busca, um botão “Buscar” deve iniciar a pesquisa.
+Abaixo da área de busca, um botão “Mostrar Favoritos” deve ser usado para exibir os filmes favoritos do usuário.
+Os resultados da busca devem ser exibidos em cartões, onde cada cartão contém:
+Título do filme.
+Imagem (poster) do filme.
+Resumo do filme.
+Botão “Adicionar aos Favoritos”.
+A aplicação deve mostrar uma lista de gêneros de filmes. Quando um gênero é selecionado, os resultados devem ser filtrados para mostrar apenas filmes desse gênero.
+ Quando o usuário realiza uma busca, uma requisição deve ser feita à API do TMDb para buscar os filmes relacionados ao termo inserido.
+ A aplicação deve fazer uma requisição para obter todos os gêneros disponíveis na API. O usuário pode selecionar um gênero para filtrar os filmes exibidos.
+ Ao lado de cada resultado de filme, um botão deve permitir que o usuário marque aquele filme como favorito.
+ O usuário pode ver uma lista de todos os filmes que marcou como favoritos. Essa lista deve ser persistente, ou seja, mesmo que o usuário recarregue a página, os filmes favoritos devem permanecer marcados.
+
+Use o localStorage do navegador para persistir os filmes favoritos do usuário. Isso significa que, mesmo se o usuário fechar a janela ou recarregar a página, seus filmes favoritos ainda estarão disponíveis na próxima vez que visitar a aplicação.
+
+
+A aplicação deve lidar com erros de requisição à API, como falhas de conexão ou erros de chave da API, mostrando uma mensagem adequada ao usuário.
+: A aplicação atende a todos os requisitos listados acima?
+: A interface é intuitiva e agradável? O design é responsivo para diferentes dispositivos?
+: O código é bem organizado, legível e segue boas práticas de programação?
+API do TMDb: https://www.themoviedb.org/documentation/api

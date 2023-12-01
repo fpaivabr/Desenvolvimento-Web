@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieMate - Catálogo de Filmes</title>
+    <link rel="icon" href="https://thumbs.dreamstime.com/z/ilustra%C3%A7%C3%A3o-de-vetor-desenho-animado-embalagens-pipoca-sorridente-feliz-embalagem-isolada-em-fundo-branco-231511674.jpg?w=768">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <img src="https://thumbs.dreamstime.com/z/caractere-de-quadro-mascote-cinema-s%C3%ADmbolo-produ%C3%A7%C3%A3o-cinematogr%C3%A1fica-filmes-isolado-em-fundo-branco-243931720.jpg?w=768" alt="Background Image" class="background-image">
+    <div class="container mt-5 text-center">
+        <div class="center-title">
+            <h1 class="display-3 mb-4">MovieMate</h1>
+            <img src="https://thumbs.dreamstime.com/z/ilustra%C3%A7%C3%A3o-de-vetor-desenho-animado-embalagens-pipoca-sorridente-feliz-embalagem-isolada-em-fundo-branco-231511674.jpg?w=768" alt="Logo" class="title-image">
+        </div>
+        <div style="height: 20px;"></div> 
+        <h2 class="h3 mb-4">Catálogo de Filmes</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <input type="text" id="campoBusca" class="form-control" placeholder="Buscar filmes..." style="max-width: 80%;">
+                    <button id="botaoBusca" class="btn btn-primary">Buscar</button>
+                </div>
+                <select id="listaGeneros" class="form-select mb-3" style="max-width: 80%;">
+                    <option selected>Selecione um gênero</option>
+                </select>
+                <button id="botaoMostrarFavoritos" class="btn btn-secondary mb-3">Mostrar Favoritos</button>
+            </div>
+        </div>
+        <div id="resultados" class="row justify-content-center">
+            <!-- Local dos cartões dos filmes-->
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 center-button">
+                <button id="botaoVoltar" class="btn btn-secondary mb-3" style="display: none;">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

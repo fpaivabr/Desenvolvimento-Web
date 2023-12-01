@@ -1,0 +1,29 @@
+.placeholder-lightcoral::placeholder {
+    color: lightcoral;
+}
+/* Centralizar o botão voltar */
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Centralizar o título e a imagem */
+.center-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Imagem do título */
+.title-image {
+    height: 5rem;
+    margin-left: 1rem;
+}
+/* Imagem de fundo */
+.background-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    opacity: 0.5;
+    z-index: -1;
+}
