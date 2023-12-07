@@ -1,0 +1,50 @@
+﻿gerenciador-livros/
+|-- src/
+|   |-- main/
+|   |   |-- java/
+|   |   |   |-- com/
+|   |   |   |   |-- projeto/
+|   |   |   |   |   |-- gerenciador-livros/
+|   |   |   |   |   |   |-- controller/
+|   |   |   |   |   |   |   |-- AutorController.java
+|   |   |   |   |   |   |   |-- LivroController.java
+|   |   |   |   |   |   |-- model/
+|   |   |   |   |   |   |   |-- Autor.java
+|   |   |   |   |   |   |   |-- Livro.java
+|   |   |   |   |   |   |-- repository/
+|   |   |   |   |   |   |   |-- AutorRepository.java
+|   |   |   |   |   |   |   |-- LivroRepository.java
+|   |   |   |   |   |   |-- service/
+|   |   |   |   |   |   |   |-- AutorService.java
+|   |   |   |   |   |   |   |-- LivroService.java
+|   |   |   |   |   |   |-- dto/
+|   |   |   |   |   |   |   |-- LivroDTO.java
+|   |   |   |   |   |   |-- GerenciadorLivrosApplication.java
+|   |   |-- resources/
+|   |   |   |-- application.properties
+|   |-- test/
+|   |   |-- java/
+|   |   |   |-- com/
+|   |   |   |   |-- projeto/
+|   |   |   |   |   |-- gerenciador-livros/
+|   |   |   |   |   |   |-- controller/
+|   |   |   |   |   |   |   |-- AutorControllerTest.java
+|   |   |   |   |   |   |   |-- LivroControllerTest.java
+|   |   |   |   |   |   |-- service/
+|   |   |   |   |   |   |   |-- AutorServiceTest.java
+|   |   |   |   |   |   |   |-- LivroServiceTest.java
+|-- pom.xml
+|-- front-end/
+|   |-- public/
+|   |   |-- index.html
+|   |-- src/
+|   |   |-- components/
+|   |   |   |-- Autor/
+|   |   |   |   |-- AutorList.jsx
+|   |   |   |   |-- AutorCreate.jsx
+|   |   |   |-- Livro/
+|   |   |   |   |-- LivroList.jsx
+|   |   |   |   |-- LivroCreate.jsx
+|   |   |-- App.js
+|   |   |-- index.js
+|   |-- package.json

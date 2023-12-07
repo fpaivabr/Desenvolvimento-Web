@@ -1,0 +1,5 @@
+com\projeto\gerenciadorlivros\controller\AutorControllerTest.class
+com\projeto\gerenciadorlivros\GerenciadorLivrosApplicationTests.class
+com\projeto\gerenciadorlivros\service\AutorServiceTest.class
+com\projeto\gerenciadorlivros\controller\LivroControllerTest.class
+com\projeto\gerenciadorlivros\service\LivroServiceTest.class

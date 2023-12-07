@@ -1,0 +1,16 @@
+com\projeto\gerenciadorlivros\service\AutorService.class
+com\projeto\gerenciadorlivros\mapper\LivroMapperImpl.class
+com\projeto\gerenciadorlivros\service\LivroService.class
+com\projeto\gerenciadorlivros\repository\LivroRepository.class
+com\projeto\gerenciadorlivros\model\Autor.class
+com\projeto\gerenciadorlivros\GerenciadorLivrosApplication.class
+com\projeto\gerenciadorlivros\controller\LivroController.class
+com\projeto\gerenciadorlivros\model\Livro.class
+com\projeto\gerenciadorlivros\config\ModelMapperConfig.class
+com\projeto\gerenciadorlivros\mapper\AutorMapper.class
+com\projeto\gerenciadorlivros\dto\LivroDTO.class
+com\projeto\gerenciadorlivros\mapper\AutorMapperImpl.class
+com\projeto\gerenciadorlivros\mapper\LivroMapper.class
+com\projeto\gerenciadorlivros\repository\AutorRepository.class
+com\projeto\gerenciadorlivros\dto\AutorDTO.class
+com\projeto\gerenciadorlivros\controller\AutorController.class
